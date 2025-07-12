@@ -1,0 +1,190 @@
+/* === Global Styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0a0f24;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+/* === Navbar Full === */
+nav {
+  position: fixed;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1em 2rem;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Left nav */
+.nav-left ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-left a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-left a:hover {
+  color: #00ffff;
+}
+
+/* Right nav icons */
+.nav-right {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav-right a {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.nav-right a:hover {
+  color: #00ffff;
+  transform: scale(1.2);
+}
+
+/* === Hero Section === */
+#hero {
+  height: 100vh;
+  background: url('assets/bg-hero.jpg') no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00ffff;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  margin-bottom: 1rem;
+}
+
+.hero-overlay h1 {
+  font-size: 2.5rem;
+}
+
+.hero-overlay h1 span {
+  color: #00ffff;
+}
+
+.hero-overlay p {
+  margin: 1rem 0;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  background: #00ffff;
+  color: #000;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #fff;
+}
+
+/* === Sections === */
+section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.projects-grid, .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card, .skill {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease, opacity 0.5s ease;
+  transform: translateY(30px);
+  opacity: 0.6;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  opacity: 1;
+}
+
+.skill {
+  font-size: 1.1rem;
+  font-weight: bold;
+  opacity: 1;
+  transform: none;
+}
+
+/* === Contact Form === */
+form {
+  max-width: 400px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, textarea {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background: #00ffff;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3);
+}
+
+button[type="submit"]:hover {
+  background: #ffffff;
+  transform: scale(1.05);
+}
+
+/* === Footer === */
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+}
